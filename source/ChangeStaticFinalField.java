@@ -2,7 +2,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
 /**
- * Created by ashrafzyanov on 7/11/17.
+ * Be care JLS 17.5.3
  */
 public class ChangeStaticFinalField {
 

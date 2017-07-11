@@ -1,13 +1,12 @@
 package com.example;
 
 
-import java.io.FileDescriptor;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 
 /**
- * This example describe how to wrap system out or redirect system out to file
+ * This example describe how to wrap system out.
+ * Field System.out is static final, it means that we can not change value of this field. But we can do it
+ * by using System.setOut. It calls native method setOut0 that change static final field.
  */
 public class WrapSystemOutExample {
 
@@ -15,17 +14,18 @@ public class WrapSystemOutExample {
 
     public static void main(String[] args) {
         System.out.println(STR);
-        change();
+        wrapPrintStream();
         System.out.println(STR);
-        changeByUsingFileDescription();
+        wrapPrintStreamByUsingFileDescription();
         System.out.println(STR);
+
     }
 
-    private static void change() {
+    private static void wrapPrintStream() {
         System.setOut(new WrapPrintStream(System.out));
     }
 
-    private static void changeByUsingFileDescription() {
+    private static void wrapPrintStreamByUsingFileDescription() {
         FileOutputStream fileOutputStream = new FileOutputStream(FileDescriptor.out) {
             @Override
             public void write(byte[] b, int off, int len) throws IOException {

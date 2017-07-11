@@ -1,7 +1,10 @@
 package com.example;
 
-import java.io.*;
-import java.nio.charset.Charset;
+
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 
 /**
  * This example describe how to wrap system out or redirect system out to file

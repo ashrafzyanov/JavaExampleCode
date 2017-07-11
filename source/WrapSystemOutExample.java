@@ -1,6 +1,3 @@
-package com.example;
-
-
 import java.io.*;
 
 /**

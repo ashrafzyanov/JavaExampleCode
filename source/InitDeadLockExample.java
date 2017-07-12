@@ -1,5 +1,3 @@
-package com.example;
-
 /**
  * Deadlock.
  * See JLS 12.4.2

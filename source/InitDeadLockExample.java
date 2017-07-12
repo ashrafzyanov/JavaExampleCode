@@ -53,8 +53,6 @@ abstract class ParentClass {
         }
     }
     public static final ParentClass PARENT_CLASS = new ChildClass();
-
-
 }
 
 class ChildClass extends ParentClass {

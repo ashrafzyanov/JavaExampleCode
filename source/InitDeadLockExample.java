@@ -1,3 +1,5 @@
+package com.example;
+
 /**
  * Deadlock.
  * See JLS 12.4.2
@@ -52,7 +54,7 @@ abstract class ParentClass {
             e.printStackTrace();
         }
     }
-    public final ParentClass PARENT_CLASS = new ChildClass();
+    public static final ParentClass PARENT_CLASS = new ChildClass();
 
 
 }

@@ -43,7 +43,6 @@ public class InitDeadLockExample {
 
 
 abstract class ParentClass {
-
     public static String NAME = "";
     static {
         try {
